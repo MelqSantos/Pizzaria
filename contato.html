@@ -58,13 +58,15 @@
 
             <div class="cont-right">
                 <form>
-                    <input type="text" name="nome" id="nome" placeholder="Nome completo">
-                    <input type="email" name="email" id="email" placeholder="E-mail">
-                    <input type="text" name="assunto" id="assunto" placeholder="Assunto">
-                    <textarea name="msg" id="msg" cols="30" rows="10" placeholder="Mensagem..."></textarea>
-
-                    <button>Enviar mensagem</button>
-
+                    <input required type="text" name="nome" id="nome" placeholder="Nome completo">
+                    <input required type="email" name="email" id="email" placeholder="E-mail">
+                    <input required type="text" name="assunto" id="assunto" placeholder="Assunto">
+                    <textarea onkeyup="validar()" required name="msg" id="msg" cols="30 " rows="10 " placeholder="Mensagem (máx. 200 caracteres)... "></textarea>
+                    <p id="alerta"></p>
+                    <div class="form-btn ">
+                        <button id="enviar" onclick="submitForm()">Enviar mensagem</button>
+                        <button type="reset ">Limpar form</button>
+                    </div>
                 </form>
             </div>
         </section>
@@ -87,7 +89,7 @@
         </div>
     </footer>
 
-
+    <script src="/assets/js/script.js "></script>
 </body>
 
 </html>

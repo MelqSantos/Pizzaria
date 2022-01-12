@@ -1,5 +1,6 @@
 * {
     margin: 0;
+    scroll-behavior: smooth;
 }
 
 
@@ -72,6 +73,7 @@ nav ul li a:hover {
 
 .icones-menu img:hover {
     transform: scale(1.2);
+    filter: invert(.8);
     cursor: pointer;
 }
 
@@ -233,6 +235,10 @@ p {
     box-shadow: 2px 2px 2px rgba(0, 0, 0, .3);
 }
 
+.img-destaque h2 {
+    margin-top: 5px;
+}
+
 .img-destaque button,
 .cont-right button {
     padding: 5px 10px;
@@ -364,6 +370,11 @@ p {
     color: #474444;
 }
 
+::-webkit-input-placeholder span {
+    content: attr(data-end);
+    color: #dd1818;
+}
+
 textarea:focus,
 input:focus {
     outline: solid 2px #c5c5c5 !important;
@@ -376,12 +387,28 @@ textarea {
     border-radius: 2px;
     background: #c5c5c58f;
     font-family: Subscriber regular;
+    box-shadow: 2px 2px 2px #a7a5a5b9;
     font-size: 1.2rem;
+    resize: none;
+    border-radius: 5px;
 }
 
 .cont-right button {
-    margin-top: 1rem;
+    margin-top: .5rem;
     width: 40%;
+}
+
+.cont-right button:nth-child(2) {
+    background: #da2d2d;
+}
+
+.cont-right button:nth-child(2):hover {
+    background: #da1313;
+}
+
+.form-btn {
+    display: flex;
+    justify-content: space-evenly;
 }
 
 @media (max-width: 768px) {
@@ -393,4 +420,11 @@ textarea {
         width: 100%;
         margin: 1rem 0;
     }
+}
+
+#alerta {
+    color: #dd1818;
+    font-weight: 100;
+    letter-spacing: .5px;
+    transition: .5s;
 }
